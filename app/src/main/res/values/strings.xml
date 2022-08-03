@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Game Store</string>
+    <string name="title_main_page">Lista de Jogos</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="the_image_game">The image game</string>
+</resources>

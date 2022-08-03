@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/gameList"
+    app:cardBackgroundColor="@color/black"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginHorizontal="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_parent"
+        android:layout_margin="5dp"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_gameItemImage"
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            app:srcCompat="@drawable/image_game_item"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@id/cl_parent"
+            app:layout_constraintBottom_toTopOf="@id/ll_gameItemDescription"
+            android:contentDescription="@string/the_image_game"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_gameItemDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/iv_gameItemImage"
+            app:layout_constraintEnd_toEndOf="@id/cl_parent"
+            app:layout_constraintStart_toStartOf="@+id/cl_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/cl_title">
+
+                <ImageView
+                    android:id="@+id/iv_calendar"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/calendar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_gameItemRelease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="2012"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toEndOf="@+id/iv_calendar"
+                    app:layout_constraintTop_toTopOf="@id/cl_title" />
+
+                <ImageView
+                    android:id="@+id/iv_time"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/time"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_gameItemRelease"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_gameItemTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="75h"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toEndOf="@+id/iv_time"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rate_bg"
+                    app:cardCornerRadius="7dp"
+                    app:layout_constraintEnd_toEndOf="@id/cl_title"
+                    app:layout_constraintTop_toTopOf="@id/cl_title">
+
+                    <TextView
+                        android:id="@+id/tv_gameItemRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="10dp"
+                        android:text="4.5"
+                        android:textColor="#FDEA3B3B"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_gameItemTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="GTA V"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
